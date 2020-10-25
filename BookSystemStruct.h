@@ -12,12 +12,12 @@ class BookInfo {
 private:
 	std::string bookName;
 	std::string authorName;
-	int copiesQuantity;
+	unsigned int copiesQuantity;
 
 public:
 	BookInfo() {}
 
-	BookInfo(std::string bookName, std::string authorName, int quantity)
+	BookInfo(std::string bookName, std::string authorName, unsigned int quantity)
 		: bookName(bookName),
 		authorName(authorName),
 		copiesQuantity(quantity)

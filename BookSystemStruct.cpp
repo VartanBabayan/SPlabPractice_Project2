@@ -85,7 +85,7 @@ void BookSystem::ModifyBookRecords()
 	std::getline(std::cin, authorName);
 
 	std::cout << "Number of copies: ";
-	int quantity;
+	unsigned int quantity;
 	std::cin >> quantity;
 
 	json temp(BookInfo(bookName, authorName, quantity));
@@ -104,7 +104,7 @@ void BookSystem::ModifyBookRecords()
 		std::getline(std::cin, authorName);
 
 		std::cout << "Number of copies: ";
-		int quantity;
+		unsigned int quantity;
 		std::cin >> quantity;
 			
 		json modified(BookInfo(bookName, authorName, quantity));

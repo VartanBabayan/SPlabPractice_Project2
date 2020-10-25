@@ -23,7 +23,7 @@ BookInfo InputedInformation()
 	std::getline(std::cin, authorName);
 	
 	std::cout << "Number of copies should be provided: ";
-	int quantity;
+	unsigned int quantity;
 	std::cin >> quantity;
 
 	return BookInfo(bookName, authorName, quantity);
@@ -40,7 +40,7 @@ int main()
 	{
 		std::cout << "Enter your choice: ";
 
-		int choice;
+		unsigned int choice;
 		std::cin >> choice;
 
 		assert(choice >= 1 && choice <= 6);
