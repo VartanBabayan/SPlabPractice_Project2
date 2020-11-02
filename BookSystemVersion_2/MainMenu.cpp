@@ -32,7 +32,7 @@ int main()
 				throw "Our System can not treat your request, please verify that you choose one of this steps: \n";
 			}
 		}
-		catch (const char* exception) // обработчик исключений типа const char*
+		catch (const char* exception)
 		{
 			std::cerr << "Error: " << exception << '\n';
 			Menu();

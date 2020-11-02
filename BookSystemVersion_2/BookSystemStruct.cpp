@@ -51,7 +51,7 @@ json BookSystem::InputedInformation()
 	return json(BookInfo(bookName, authorName, quantity));
 }
 
-void BookSystem::AddBookRecords(json book)
+void BookSystem::AddBookRecords(const json& book)
 {
 	j.push_back(book);
 
@@ -74,7 +74,7 @@ void BookSystem::ShowBookRecords()
 	std::cout << "\n";
 }
 
-bool BookSystem::CheckAvailability(json book)
+bool BookSystem::CheckAvailability(const json& book)
 {	
 	for (int i = 0; i < j.size(); ++i)
 	{
@@ -110,7 +110,7 @@ void BookSystem::ModifyBookRecords()
 	return;
 }
 
-void BookSystem::DeleteBookRecords(json book)
+void BookSystem::DeleteBookRecords(const json& book)
 {
 	if (CheckAvailability(book))
 	{

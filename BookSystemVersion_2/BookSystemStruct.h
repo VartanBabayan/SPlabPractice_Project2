@@ -36,11 +36,11 @@ class BookSystem {
 private:
 	json j = json::array();
 public:
-	void AddBookRecords(json book);
+	void AddBookRecords(const json& book);
 	void ShowBookRecords();
-	bool CheckAvailability(json book);
+	bool CheckAvailability(const json& book);
 	void ModifyBookRecords();
-	void DeleteBookRecords(json book);
+	void DeleteBookRecords(const json& book);
 	json InputedInformation(); //book parsed into json
 
 
