@@ -12,6 +12,7 @@ Here you can do:
 
 ## Build and Run requirements
 g++ (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+
 cmake version 3.16.3
 
 ### Everything done working with JSON library nlohmann and C++
