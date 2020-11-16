@@ -8,7 +8,7 @@
 #include "nlohmann/json.hpp"
 using json = nlohmann::json;
 
-//Object Book
+// Object Book
 class BookInfo {
 private:
 	std::string bookName{};
@@ -31,7 +31,7 @@ public:
 	~BookInfo() {}
 };
 
-//class that simulate all my BookSystem
+// class that simulate all my BookSystem
 class BookSystem {
 private:
 	json j = json::array();
@@ -41,7 +41,7 @@ public:
 	bool CheckAvailability(const json& book);
 	void ModifyBookRecords();
 	void DeleteBookRecords(const json& book);
-	json InputedInformation(); //book parsed into json
+	json InputedInformation(); // book parsed into json
 
 
 	void readJSON();

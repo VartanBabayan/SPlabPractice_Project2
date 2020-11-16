@@ -1,6 +1,6 @@
 #include "BookSystemStruct.h"
 
-//functions "to_json" and "from_json" to work with Object "BookInfo"
+// functions "to_json" and "from_json" to work with Object "BookInfo"
 void to_json(json& j, const BookInfo& p) {
 	j = json{ {"BookName", p.bookName}, {"AuthorName", p.authorName}, {"BookQuantity", p.copiesQuantity} };
 }
@@ -11,19 +11,19 @@ void from_json(const json& j, BookInfo& p) {
 	j.at("BookQuantity").get_to(p.copiesQuantity);
 }
 
-//to read JSON when program starts
+// to read JSON when program starts
 void BookSystem::readJSON()
 {
 	std::ifstream fin("Base.json");
 
 	std::string tempInfo;
 	while (std::getline(fin, tempInfo)) {
-		j.push_back(json::parse(tempInfo)); //parse string to json 
+		j.push_back(json::parse(tempInfo)); // parse string to json 
 	}
 	fin.close();
 }
 
-//to change JSON after modifying while program worked
+// to change JSON after modifying while program worked
 void BookSystem::writeJson()
 {
 	std::ofstream fout("Base.json", std::ios_base::trunc);
