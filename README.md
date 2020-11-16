@@ -10,7 +10,11 @@ Here you can do:
 4. Modify Books
 5. Delete Books
 
-## Everything done working with JSON library nlohmann and C++
+## Build and Run requirements
+g++ (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+cmake version 3.16.3
+
+### Everything done working with JSON library nlohmann and C++
 Note that to run the project you should compile it using cmake and CMakeLists.txt (in Linux)
 
 Each Book saves in Base.json file 
