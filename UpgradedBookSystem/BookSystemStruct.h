@@ -3,7 +3,6 @@
 #include <string>
 #include <vector>
 #include <cstdlib>
-#include <cassert>
 #include <fstream>
 #include <exception>
 #include "nlohmann/json.hpp"
@@ -32,7 +31,7 @@ public:
 	~BookInfo() {}
 };
 
-//class that simulate all my BookSystem
+// class that simulate all my BookSystem
 class BookSystem {
 private:
 	json BookStorage = json::array();
@@ -44,13 +43,10 @@ public:
 	void ModifyBookRecords();
 	void DeleteBookRecords(const json& book);
 
-	json InputedInformation() const; //book parsed into json
+	json InputedInformation() const; // book parsed into json
 	json inputToFindBook() const;
 
-	json getBase() const
-	{
-		return BookStorage;
-	}
+	bool isBaseEmpty() const;
 
 	void readJSON();
 	void writeJson();

@@ -54,7 +54,7 @@ int main()
 
 		case '2':
 		{
-			if (MainSystem.getBase().empty())
+			if (MainSystem.isBaseEmpty())
 			{
 				std::cout << "Sorry, There is no books in our Storage yet\n";
 				std::cout << "Add some books before doing something\n";
@@ -68,7 +68,7 @@ int main()
 
 		case '3':
 		{
-			if (MainSystem.getBase().empty())
+			if (MainSystem.isBaseEmpty())
 			{
 				std::cout << "Sorry, There is no books in our Storage yet\n";
 				std::cout << "Add some books before doing something\n";
@@ -82,7 +82,7 @@ int main()
 
 		case '4':
 		{
-			if (MainSystem.getBase().empty())
+			if (MainSystem.isBaseEmpty())
 			{
 				std::cout << "Sorry, There is no books in our Storage yet\n";
 				std::cout << "Add some books before doing something\n";
@@ -96,7 +96,7 @@ int main()
 
 		case '5':
 		{
-			if (MainSystem.getBase().empty())
+			if (MainSystem.isBaseEmpty())
 			{
 				std::cout << "Sorry, There is no books in our Storage yet\n";
 				std::cout << "Add some books before doing something\n";

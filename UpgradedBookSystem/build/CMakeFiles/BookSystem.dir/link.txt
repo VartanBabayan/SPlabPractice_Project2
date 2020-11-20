@@ -1,1 +1,0 @@
-/usr/bin/c++  -std=c++11 -O3  -rdynamic CMakeFiles/BookSystem.dir/MainMenu.cpp.o CMakeFiles/BookSystem.dir/BookSystemStruct.cpp.o  -o BookSystem 

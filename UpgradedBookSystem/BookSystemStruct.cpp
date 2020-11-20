@@ -103,6 +103,11 @@ json BookSystem::inputToFindBook() const
 	return json(BookInfo(bookName, authorName, 0));
 }
 
+bool BookSystem::isBaseEmpty() const
+{
+	return BookStorage.size() == 0;
+}
+
 void BookSystem::AddBookRecords(const json& book)
 {
 	BookStorage.push_back(book);
