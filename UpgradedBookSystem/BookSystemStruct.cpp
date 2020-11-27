@@ -1,20 +1,25 @@
 #include "BookSystemStruct.h"
 
+#define BaseFileName "Base.json" 
+#define BookName "BookName" 
+#define AuthorName "AuthorName"
+#define BookQuantity "BookQuantity" 
+
 //functions "to_json" and "from_json" to work with Object "BookInfo"
 void to_json(json& BookStorage, const BookInfo& p) {
-	BookStorage = json{ {"BookName", p.bookName}, {"AuthorName", p.authorName}, {"BookQuantity", p.copiesQuantity} };
+	BookStorage = json{ {BookName, p.bookName}, {AuthorName, p.authorName}, {BookQuantity, p.copiesQuantity} };
 }
 
 void from_json(const json& BookStorage, BookInfo& p) {
-	BookStorage.at("BookName").get_to(p.bookName);
-	BookStorage.at("AuthorName").get_to(p.authorName);
-	BookStorage.at("BookQuantity").get_to(p.copiesQuantity);
+	BookStorage.at(BookName).get_to(p.bookName);
+	BookStorage.at(AuthorName).get_to(p.authorName);
+	BookStorage.at(BookQuantity).get_to(p.copiesQuantity);
 }
 
 // to read JSON when program starts
 void BookSystem::readJSON()
 {
-	std::ifstream fin("Base.json");
+	std::ifstream fin(BaseFileName);
 
 	if (!fin) // checking if some problems with file
 	{
@@ -32,7 +37,7 @@ void BookSystem::readJSON()
 // to change JSON after modifying while program worked
 void BookSystem::writeJson()
 {
-	std::ofstream fout("Base.json", std::ios_base::trunc);
+	std::ofstream fout(BaseFileName, std::ios_base::trunc);
 
 	if (!fout) // checking if some problems with file
 	{
