@@ -71,9 +71,6 @@ void BookSystem::ShowBookRecords()
 		return;
 	}
 
-	for (int i = 0; i < j.size(); ++i) 
-		std::cout << j[i] << "\n";
-
 	std::cout << "\n";
 }
 
