@@ -141,7 +141,7 @@ bool BookSystem::CheckAvailability(const json& book) const
 {
 	for (int i = 0; i < BookStorage.size(); ++i)
 	{
-		if (BookStorage[i]["BookName"] == book["BookName"] && BookStorage[i]["AuthorName"] == book["AuthorName"]) 
+		if (BookStorage[i][BookName] == book[BookName] && BookStorage[i][AuthorName] == book[AuthorName]) 
 		{
 			std::cout << "\n" << BookStorage[i] << "\n";
 			
@@ -168,7 +168,7 @@ void BookSystem::ModifyBookRecords()
 
 		for (int i = 0; i < BookStorage.size(); ++i)
 		{
-			if (BookStorage[i]["BookName"] == book["BookName"] && BookStorage[i]["AuthorName"] == book["AuthorName"])
+			if (BookStorage[i][BookName] == book[BookName] && BookStorage[i][AuthorName] == book[AuthorName])
 				BookStorage[i] = modified;
 		}
 
@@ -183,7 +183,7 @@ void BookSystem::DeleteBookRecords(const json& book)
 	{
 		for (int i = 0; i < BookStorage.size(); ++i)
 		{
-			if (BookStorage[i]["BookName"] == book["BookName"] && BookStorage[i]["AuthorName"] == book["AuthorName"])
+			if (BookStorage[i][BookName] == book[BookName] && BookStorage[i][AuthorName] == book[AuthorName])
 				BookStorage.erase(BookStorage.begin() + i);
 		}
 
