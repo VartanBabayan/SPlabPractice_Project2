@@ -34,5 +34,3 @@ Note that to run the project you should compile it using cmake and CMakeLists.tx
 Each Book saves in Base.json file 
 
 All working connected with reading/writing into json objects and finally into base file Base.json
-
-
