@@ -1,14 +1,5 @@
 #pragma once
 
-#include <iostream>
-#include <string>
-#include <vector>
-#include <cstdlib>
-#include <fstream>
-#include <exception>
-#include "nlohmann/json.hpp"
-using json = nlohmann::json;
-
 #define BaseFileName "Base.json"
 
 class DataBaseInterface 
